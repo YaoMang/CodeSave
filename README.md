@@ -1,2 +1,2 @@
-# Leetcode
-The save of leetcode practice
+# Practice
+The save of practice code
