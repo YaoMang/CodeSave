@@ -1,3 +1,5 @@
+#include <string>
+
 class Account {
 public:
     void calculate() { amount += amount * interestRate; }
