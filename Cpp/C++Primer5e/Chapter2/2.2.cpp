@@ -1,0 +1,3 @@
+/*
+Of course double. For this kind of type has enough accuracy to handle this kind of work.
+*/
