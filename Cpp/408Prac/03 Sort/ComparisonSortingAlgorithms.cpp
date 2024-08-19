@@ -36,3 +36,31 @@ int BinarySearch(int A[], int start, int end, int Key)
 {
     
 }
+
+void swap(int& a, int& b)
+{
+    int temp = a;
+    a = b;
+    b = temp;
+}
+
+// 冒泡排序
+void BubbleSort(int A[], int size)
+{
+    for(int i = 0; i < size; ++i) // 最外层循环
+    {
+        int trigger = 0; // 触发器，检测在一趟排序中是否触发数据交换
+        for(int j = 0; j < size - i - 1; ++j) // 排序范围为 A[0, n - i]，从前向后排序
+        {
+            if(A[j] > A[j + 1]) // 若前一位置大于后一位置，则交换位置，并修改触发器
+            {
+                swap(A[j], A[j + 1]);
+                trigger = 1;
+            }
+        }
+        if(trigger == 0) // 在一轮排序中没有发生位置交换，序列已经有序
+        {
+            break;
+        }
+    }
+}
