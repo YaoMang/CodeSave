@@ -1,5 +1,3 @@
-// 31 min
-
 class Solution {
     public:
         int myAtoi(string s) {
@@ -35,11 +33,13 @@ class Solution {
             for(auto& c : atoiStr){
                 num = c - 48;
     
+                // ROUND AND OVERFLOW CHECK
                 if(ret < INT_MIN / 10)
                     return INT_MIN;
                 else if(ret > INT_MAX / 10)
                     return INT_MAX;
     
+                // ROUND AND OVERFLOW CHECK
                 ret *= 10;
                 if(SF){
                     if(INT_MIN + num > ret)
